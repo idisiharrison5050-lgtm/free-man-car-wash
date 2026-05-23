@@ -2,19 +2,15 @@ const express    = require('express');
 const mongoose   = require('mongoose');
 const bodyParser = require('body-parser');
 const app  = express();
+require('dotenv').config();
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb+srv://ydee3773_db_user:jL7RGNCQVaZ8t_y@cluster0.l9pggwv.mongodb.net/freemancarwash",
-  {
-    useNewUrlParser: true,     // ✅ use new URL parser
-    useUnifiedTopology: true   // ✅ use the new Server Discovery and Monitoring engine
-  }
-)
-.then(function() {
-  console.log("✅ wealthbridge server connected to MongoDB Atlas");
-//   seedDB();
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,     // ✅ use new URL parser
+  useUnifiedTopology: true   // ✅ use the new Server Discovery and Monitoring engine
 })
-
+.then(function() {
+  console.log("✅ Server connected to MongoDB Atlas");
+})
 .catch(function(err) {
   console.error("❌ Mongoose connection error:", err);
 });
