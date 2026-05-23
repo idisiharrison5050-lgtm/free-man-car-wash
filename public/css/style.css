@@ -497,18 +497,20 @@ footer {
 /* Update ONLY this mobile media query block at the very bottom */
 @media (max-width: 900px) {
     .visual-showcase { 
-        padding: 40px 24px; 
+        padding: 40px 24px !important; 
     }
     
     .showcase-container { 
-        flex-direction: column; 
-        height: auto; /* Fixes the squishing by letting the container grow dynamically */
-        gap: 16px; /* Clean spacing between stacked images */
+        flex-direction: column !important; 
+        height: auto !important; /* Forces the container to expand out dynamically */
+        gap: 16px !important; 
+        display: flex !important;
     }
     
     .showcase-card { 
-        height: 250px; /* Gives each image its own prominent, visible height frame on mobile screens */
-        width: 100%;
-        padding: 24px;
+        height: 260px !important; /* Forces each individual panel to be large and readable */
+        width: 100% !important;
+        flex: none !important; /* Prevents the flex container from shrinking them down */
+        padding: 24px !important;
     }
 }
