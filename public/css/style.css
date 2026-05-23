@@ -494,8 +494,21 @@ footer {
 }
 
 /* Stacks beautifully on tablet and mobile viewports */
+/* Update ONLY this mobile media query block at the very bottom */
 @media (max-width: 900px) {
-    .visual-showcase { padding: 40px 24px; }
-    .showcase-container { flex-direction: column; height: auto; }
-    .showcase-card { height: 200px; }
+    .visual-showcase { 
+        padding: 40px 24px; 
+    }
+    
+    .showcase-container { 
+        flex-direction: column; 
+        height: auto; /* Fixes the squishing by letting the container grow dynamically */
+        gap: 16px; /* Clean spacing between stacked images */
+    }
+    
+    .showcase-card { 
+        height: 250px; /* Gives each image its own prominent, visible height frame on mobile screens */
+        width: 100%;
+        padding: 24px;
+    }
 }
