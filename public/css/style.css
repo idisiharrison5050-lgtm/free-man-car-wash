@@ -442,3 +442,60 @@ footer {
   .hero-btns { flex-direction: column; align-items: center; }
   footer { flex-direction: column; gap: 24px; text-align: center; }
 }
+
+/* Custom background layout for the photo header */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 0 24px;
+}
+
+/* ── CINEMATIC VISUAL SHOWCASE STYLES ── */
+.visual-showcase {
+    padding: 60px 60px; /* Shorter padding to create a sleek divider effect */
+    background: var(--black);
+}
+
+.showcase-container {
+    display: flex;
+    gap: 20px;
+    height: 380px; /* Sets a solid, premium height profile across your screen */
+}
+
+.showcase-card {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end; /* Pushes the small label text cleanly to the bottom */
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.showcase-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Luxury hover expansion effect */
+.showcase-card:hover {
+    flex: 1.3; /* Smoothly widens the panel you hover over */
+    border-color: var(--gold);
+}
+
+/* Stacks beautifully on tablet and mobile viewports */
+@media (max-width: 900px) {
+    .visual-showcase { padding: 40px 24px; }
+    .showcase-container { flex-direction: column; height: auto; }
+    .showcase-card { height: 200px; }
+}
