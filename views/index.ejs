@@ -1,0 +1,242 @@
+<%- include('partials/header') %>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="ripple-wrap">
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+    <div class="ripple"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Premium Auto Detailing</p>
+    <h1 class="hero-title">Free Man Active<br><em>Car Wash</em></h1>
+    <p class="hero-sub">Where precision meets prestige. Your vehicle, treated to the standard it deserves.</p>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-primary">Reserve Your Appointment</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What We Offer</div>
+  <h2 class="section-title">Every Service,<br><em>Flawlessly Executed</em></h2>
+  <div class="divider"></div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">✦</span>
+      <div class="service-name">Express Wash</div>
+      <p class="service-desc">A swift, thorough exterior cleanse using premium foam and high-pressure rinse. Ready in minutes, gleaming for days.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">◈</span>
+      <div class="service-name">Full Detail</div>
+      <p class="service-desc">Interior vacuuming, surface wipe-down, window cleaning, and exterior hand-polish. Showroom condition, guaranteed.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">◉</span>
+      <div class="service-name">Ceramic Coat</div>
+      <p class="service-desc">Long-lasting nano-ceramic protection that repels water, UV rays, and contaminants. Your investment, shielded.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">❋</span>
+      <div class="service-name">Interior Deep Clean</div>
+      <p class="service-desc">Steam cleaning, leather conditioning, odor neutralization, and full cabin restoration. Fresh from the inside out.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">⬡</span>
+      <div class="service-name">Paint Correction</div>
+      <p class="service-desc">Multi-stage machine polishing to eliminate swirl marks, scratches, and oxidation. Restoring the original brilliance.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">✧</span>
+      <div class="service-name">VIP Package</div>
+      <p class="service-desc">Our white-glove, head-to-toe treatment. Every surface addressed, every detail perfected. The ultimate experience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Transparent Pricing</div>
+  <h2 class="section-title">Simple Plans,<br><em>Exceptional Value</em></h2>
+  <div class="divider"></div>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="plan-name">Essential</div>
+      <div class="plan-price"><sup>₦</sup>4000</div>
+      <div class="plan-period">per visit</div>
+      <ul class="plan-features">
+        <li>Exterior foam wash</li>
+        <li>High-pressure rinse</li>
+        <li>Wheel & tire clean</li>
+        <li>Air dry & spot check</li>
+      </ul>
+      <button class="btn-plan" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Essential</button>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="plan-name">Signature</div>
+      <div class="plan-price"><sup>₦</sup>7000</div>
+      <div class="plan-period">per visit</div>
+      <ul class="plan-features">
+        <li>Everything in Essential</li>
+        <li>Interior vacuum & wipe</li>
+        <li>Window cleaning (in & out)</li>
+        <li>Hand wax & polish</li>
+        <li>Tire shine & dress</li>
+        <li>Air freshener</li>
+      </ul>
+      <button class="btn-plan" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Signature</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="plan-name">Prestige</div>
+      <div class="plan-price"><sup>₦</sup>19900</div>
+      <div class="plan-period">per visit</div>
+      <ul class="plan-features">
+        <li>Everything in Signature</li>
+        <li>Full interior deep clean</li>
+        <li>Leather conditioning</li>
+        <li>Paint clay bar treatment</li>
+        <li>Machine polish</li>
+        <li>Ceramic spray coat</li>
+        <li>Dedicated detailer</li>
+      </ul>
+      <button class="btn-plan" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Prestige</button>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="section-label">Reserve Your Spot</div>
+  <h2 class="section-title">Book an<br><em>Appointment</em></h2>
+  <div class="divider"></div>
+
+  <div class="booking-wrap">
+    <div class="booking-info">
+      <p>We operate by appointment to ensure every vehicle receives our undivided attention. Choose your service, pick your time, and arrive to find a team ready for you.</p>
+      <ul class="info-list">
+        <li><span class="icon">◷</span><span>Appointments typically take 30 min – 4 hours depending on the package selected.</span></li>
+        <li><span class="icon">◈</span><span>Please arrive 5 minutes early. Late arrivals may need to reschedule.</span></li>
+        <li><span class="icon">✦</span><span>Cancellations accepted up to 24 hours before your appointment — no charge.</span></li>
+        <li><span class="icon">❋</span><span>We accept all major cards, cash, and digital payments.</span></li>
+      </ul>
+    </div>
+
+    <form class="booking-form" onsubmit="handleBooking(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John" required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+1 (555) 000-0000" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="john@example.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Select Package</label>
+        <select required>
+          <option value="" disabled selected>Choose a package...</option>
+          <option>Essential — ₦4000</option>
+          <option>Signature — ₦7000</option>
+          <option>Prestige — ₦19900</option>
+          <option>Express Wash Only — ₦2000</option>
+          <option>Interior Deep Clean — ₦5000</option>
+          <option>Ceramic Coat — ₦10000</option>
+          <option>Paint Correction — ₦15000</option>
+          <option>VIP Package — Custom Quote</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" required>
+        </div>
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <select required>
+            <option value="" disabled selected>Select time...</option>
+            <option>8:00 AM</option>
+            <option>9:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>1:00 PM</option>
+            <option>2:00 PM</option>
+            <option>3:00 PM</option>
+            <option>4:00 PM</option>
+            <option>5:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Vehicle (Make, Model, Year)</label>
+        <input type="text" placeholder="e.g. 2022 BMW 5 Series">
+      </div>
+      <div class="form-group">
+        <label>Special Requests</label>
+        <textarea placeholder="Any specific concerns or requests..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Confirm Appointment</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Find Us</div>
+  <h2 class="section-title">Location &<br><em>Contact</em></h2>
+  <div class="divider"></div>
+
+  <div class="contact-grid">
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="label">Address</div>
+        <p>Ecomog Fuel station Kwale Road<br>Ozoro<br>Delta State</p>
+      </div>
+      <div class="contact-item">
+        <div class="label">Get in Touch</div>
+        <p>📞 (555) 123-4567<br>✉ hello@freemancarwash.com</p>
+      </div>
+      <div class="contact-item">
+        <div class="label">Hours of Operation</div>
+        <div class="hours-grid">
+          <div style="grid-column: span 2;">
+            <div class="hour-row"><span class="day">Monday – Friday</span><span>8:00 AM – 6:00 PM</span></div>
+            <div class="hour-row"><span class="day">Saturday</span><span>8:00 AM – 5:00 PM</span></div>
+            <div class="hour-row"><span class="day">Sunday</span><span>10:00 AM – 4:00 PM</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-placeholder">
+      <div class="map-pin">📍</div>
+      <div class="map-text">Ecomog Gas station Kwale Road — Ozoro, Delta State</div>
+      <a href="https://maps.google.com" target="_blank" class="btn-ghost" style="margin-top:8px; font-size:10px; padding: 10px 28px;">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
